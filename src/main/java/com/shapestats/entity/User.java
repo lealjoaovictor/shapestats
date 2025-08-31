@@ -3,6 +3,7 @@ package com.shapestats.entity;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
 import jakarta.persistence.Entity;
@@ -13,6 +14,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "users")
+@Data
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
