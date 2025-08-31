@@ -1,6 +1,6 @@
 package com.shapestats.entity;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 import jakarta.persistence.Entity;
@@ -10,9 +10,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.Data;
 
 @Entity
 @Table(name = "measurements")
+@Data
 public class Measurement {
 
     @Id
@@ -22,8 +24,6 @@ public class Measurement {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
-
-    private LocalDate date;
 
     private Double weight;
     private Double height;
@@ -45,5 +45,7 @@ public class Measurement {
 
     private Double rightCalf;
     private Double leftCalf;
+
+    private LocalDateTime createdAt = LocalDateTime.now();
 }
 
