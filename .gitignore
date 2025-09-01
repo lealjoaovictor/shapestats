@@ -29,7 +29,7 @@ build/
 .vscode/
 
 # Arquivos locais e sensíveis
-/src/main/resources/application-local.properties
+src/main/resources/application-local.properties
 
 # Logs e classes compiladas
 *.log
